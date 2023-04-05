@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Full-Screen Layout</title>
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+    body {
+      margin: 0;
+      font-family: "Poppins";
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      min-height: 100%;
+
+    }
+
+    .panel {
+      display: grid;
+      grid-template-rows: 1fr;
+    }
+
+    .panel .text {
+      background: #eeeee7;
+      color: #323230;
+      padding: 30px 60px;
+    }
+
+    .panel.welcome {
+      background: #323230;
+      padding: 30px 60px;
+      grid-auto-rows: 1fr;
+
+    }
+
+    .panel.welcome nav a {
+      color: #a8a8a8;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .panel.welcome p {
+      color: #a8a8a8;
+      max-width: 540px;
+    }
+
+    .panel.welcome h1 {
+      color: #eeeee7;
+      font-size: 3em;
+    }
+
+    .panel.welcome footer {
+      align-self: end;
+    }
+
+ .panel.about {
+  grid-template-rows: 3fr 1fr;
+  overflow: hidden;
+  
+
+ }
+ .panel.about img {
+  min-width: 100%;
+  min-height: 100%;
+ }
+
+ .panel.photos {
+  grid-template-rows: 1fr 3fr;
+  overflow: hidden;
+ }
+
+
+ @media screen and (max-width: 1400px) {
+  main {
+    grid-template-columns:1fr 1fr;
+  
+  }
+  .panel.photos {
+    grid-column: span 2 ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  
+}
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="panel welcome">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/">Portfolio</a>
+        <a href="/">Contact</a>
+      </nav>
+
+      <div>
+        <h1>Danish-chouhan</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi,
+          alias praesentium earum ipsa reprehenderit ea quia asperiores
+          consequuntur veniam aliquam sint fugiat rem, quod quibusdam eius
+          sunt unde maiores quas?
+        </p>
+      </div>
+      <footer>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </footer>
+    </div>
+    <div class="panel about">
+      <img src="img/1.png" alt="" />
+      <div class="text">
+        <h2>About Me</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, a!
+        </p>
+      </div>
+    </div>
+
+    <div class="panel photos">
+      <div class="text">
+        <h2>Photography</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+          iste! Animi sed optio soluta rerum, similique placeat velit
+          voluptatum illum?
+        </p>
+      </div>
+      <img src="img/2.png" alt="">
+    </div>
+  </main>
+</body>
+
+</html>
